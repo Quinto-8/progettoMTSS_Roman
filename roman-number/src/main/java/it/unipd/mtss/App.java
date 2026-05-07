@@ -1,0 +1,18 @@
+////////////////////////////////////////////////////////////////////
+// ANDREA MAGGIO 2145610
+// ALEX BUOSO 2148614
+////////////////////////////////////////////////////////////////////
+
+package it.unipd.mtss;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+    }
+}
