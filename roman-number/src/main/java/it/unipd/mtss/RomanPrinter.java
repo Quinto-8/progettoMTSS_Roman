@@ -56,6 +56,19 @@ public class RomanPrinter {
                 };
                 return xArt[row];
         }
+
+        if (letter == 'L') {
+                String[] lArt={
+                    " _      ",
+                    "| |     ",
+                    "| |     ",
+                    "| |     ",
+                    "| |____ ",
+                    "|______|"
+                };
+                return lArt[row];
+        }
         return "";
+
     }
 }

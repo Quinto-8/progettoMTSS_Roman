@@ -127,5 +127,35 @@ public class IntegerToRomanTest {
 
         assertEquals(expected, result);
     }
+
+    @Test
+    public void shouldConvert40ToXL() {
+        int number = 40;
+        String expected = "XL";
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldConvert44ToXLIV() {
+        int number = 44;
+        String expected = "XLIV";
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldConvert50ToL() {
+        int number = 50;
+        String expected = "L";
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals(expected, result);
+    }
 }
 

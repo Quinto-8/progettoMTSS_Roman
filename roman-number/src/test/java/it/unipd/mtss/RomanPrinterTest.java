@@ -155,4 +155,51 @@ public class RomanPrinterTest {
 
         assertEquals(expected, result);
     }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber40() {
+        int number = 40;
+        String expected = 
+            "__   __ _      \n" +
+            "\\ \\ / /| |     \n" +
+            " \\ V / | |     \n" +
+            "  > <  | |     \n" +
+            " / ^ \\ | |____ \n" +
+            "/_/ \\_\\|______|\n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber50() {
+        int number = 50;
+        String expected = 
+            " _      \n" +
+            "| |     \n" +
+            "| |     \n" +
+            "| |     \n" +
+            "| |____ \n" +
+            "|______|\n";
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber44() {
+    int number = 44; 
+    String expected = 
+        "__   __ _       _____ __      __\n" +
+        "\\ \\ / /| |     |_   _|\\ \\    / /\n" +
+        " \\ V / | |       | |   \\ \\  / / \n" +
+        "  > <  | |       | |    \\ \\/ /  \n" +
+        " / ^ \\ | |____  _| |_    \\  /   \n" +
+        "/_/ \\_\\|______||_____|    \\/    \n";
+
+    String result = RomanPrinter.print(number);
+
+    assertEquals(expected, result);
+}
 }
