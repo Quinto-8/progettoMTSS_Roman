@@ -61,7 +61,7 @@ public class RomanPrinterTest {
     }   
 
     @Test
-    public void testPrintEight_ShouldReturnAsciiVIII() {
+    public void shouldReturnAsciiArtForNumber8() {
         int number = 8;
         String expected = 
             "__      __ _____  _____  _____ \n" +
@@ -77,7 +77,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void testPrintNine_ShouldReturnAsciiIX() {
+    public void shouldReturnAsciiArtForNumber9() {
         int number = 9;
         String expected = 
             " _____ __   __\n" +
@@ -93,7 +93,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void testPrintTen_ShouldReturnAsciiX() {
+    public void shouldReturnAsciiArtForNumber10() {
         int number = 10;
         String expected = 
             "__   __\n" +
@@ -107,5 +107,52 @@ public class RomanPrinterTest {
 
         assertEquals(expected, result);
     }
-}
 
+    @Test
+    public void shouldPrintAsciiArtForNumber14() {
+        int number = 14;
+        String expected = 
+            "__   __ _____ __      __\n" +
+            "\\ \\ / /|_   _|\\ \\    / /\n" +
+            " \\ V /   | |   \\ \\  / / \n" +
+            "  > <    | |    \\ \\/ /  \n" +
+            " / ^ \\  _| |_    \\  /   \n" +
+            "/_/ \\_\\|_____|    \\/    \n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber19() {
+        int number = 19;
+        String expected = 
+            "__   __ _____ __   __\n" +
+            "\\ \\ / /|_   _|\\ \\ / /\n" +
+            " \\ V /   | |   \\ V / \n" +
+            "  > <    | |    > <  \n" +
+            " / ^ \\  _| |_  / ^ \\ \n" +
+            "/_/ \\_\\|_____|/_/ \\_\\\n";
+
+        String result = RomanPrinter.print(number);
+        
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber20() {
+        int number = 20;
+        String expected = 
+            "__   ____   __\n" +
+            "\\ \\ / /\\ \\ / /\n" +
+            " \\ V /  \\ V / \n" +
+            "  > <    > <  \n" +
+            " / ^ \\  / ^ \\ \n" +
+            "/_/ \\_\\/_/ \\_\\\n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+}

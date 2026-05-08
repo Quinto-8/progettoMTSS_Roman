@@ -98,5 +98,34 @@ public class IntegerToRomanTest {
         assertEquals(expected, result);
     }
     
+    @Test
+    public void shouldConvert14ToXIV() {
+        int number = 14;
+        String expected = "XIV";
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldConvert19ToXIX() {
+        int number = 19;
+        String expected = "XIX";
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldConvert20ToXX() {
+        int number = 20;
+        String expected = "XX";
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals(expected, result);
+    }
 }
 
