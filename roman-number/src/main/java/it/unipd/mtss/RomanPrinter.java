@@ -19,30 +19,42 @@ public class RomanPrinter {
             }
             result += "\n";
         }
-        return result;
+        return result.toString();
     }
+ 
     private static String getLine(char letter, int row) {
         if (letter == 'I') {
-            String[] iArt = {
-                " _____ ",
-                "|_   _|",
-                "  | |  ",
-                "  | |  ",
-                " _| |_ ",
-                "|_____|"
-            };
-            return iArt[row];
+                String[] iArt={
+                    " _____ ",
+                    "|_   _|",
+                    "  | |  ",
+                    "  | |  ",
+                    " _| |_ ",
+                    "|_____|"
+                };
+                return iArt[row];
         }
-        if (letter == 'V') {
-            String[] vArt = {
-                "__      __",
-                "\\ \\    / /",
-                " \\ \\  / / ",
-                "  \\ \\/ /  ",
-                "   \\  /   ",
-                "    \\/    "
-            };
-            return vArt[row];
+        if (letter == 'V'){
+                String[] vArt={
+                    "__      __",
+                    "\\ \\    / /",
+                    " \\ \\  / / ",
+                    "  \\ \\/ /  ",
+                    "   \\  /   ",
+                    "    \\/    "
+                };
+                return vArt[row];
+        }
+        if (letter == 'X'){
+                String[] xArt={
+                    "__   __",
+                    "\\ \\ / /",
+                    " \\ V / ",
+                    "  > <  ",
+                    " / ^ \\ ",
+                    "/_/ \\_\\"
+                };
+                return xArt[row];
         }
         return "";
     }
