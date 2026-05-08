@@ -33,6 +33,17 @@ public class RomanPrinter {
             };
             return iArt[row];
         }
+        if (letter == 'V') {
+            String[] vArt = {
+                "__      __",
+                "\\ \\    / /",
+                " \\ \\  / / ",
+                "  \\ \\/ /  ",
+                "   \\  /   ",
+                "    \\/    "
+            };
+            return vArt[row];
+        }
         return "";
     }
 }
