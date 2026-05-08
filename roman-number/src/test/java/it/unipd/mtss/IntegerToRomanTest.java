@@ -67,5 +67,36 @@ public class IntegerToRomanTest {
 
         assertEquals(expected, result);
     }
+
+    @Test
+    public void shouldConvert8ToVIII() {
+        int number = 8;
+        String expected = "VIII";
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldConvert9ToIX() {
+        int number = 9;
+        String expected = "IX";
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldConvert10ToX() {
+        int number = 10;
+        String expected = "X";
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals(expected, result);
+    }
     
 }
+
