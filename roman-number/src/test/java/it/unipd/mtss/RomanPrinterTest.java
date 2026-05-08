@@ -43,4 +43,20 @@ public class RomanPrinterTest {
 
         assertEquals(expected, result);
     }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber6() {
+        int number = 6;
+        String expected = 
+            "__      __ _____ \n" + 
+            "\\ \\    / /|_   _|\n" +
+            " \\ \\  / /   | |  \n" +
+            "  \\ \\/ /    | |  \n" +
+            "   \\  /    _| |_ \n" +
+            "    \\/    |_____|\n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }   
 }

@@ -10,6 +10,11 @@ import org.junit.Test;
 
 public class IntegerToRomanTest {
 
+    @Test(expected = IllegalArgumentException.class)
+    public void testInputNegativo() {
+        IntegerToRoman.convert(-1);
+    }
+
     @Test
     public void shouldConvert1ToI() {
         
@@ -43,9 +48,24 @@ public class IntegerToRomanTest {
         assertEquals(expected, result);
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void testInputNegativo() {
-        IntegerToRoman.convert(-1);
+    @Test
+    public void shouldConvert4ToIV() {
+        int number = 4;
+        String expected = "IV";
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals(expected, result);
+    }
+    
+    @Test
+    public void shouldConvert6ToVI() {
+        int number = 6;
+        String expected = "VI";
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals(expected, result);
     }
     
 }
