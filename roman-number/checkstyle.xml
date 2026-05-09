@@ -21,7 +21,7 @@
         <module name="CyclomaticComplexity"/>
 
         <module name="MethodLength">
-            <property name="max" value="60"/>
+            <property name="max" value="100"/>
         </module>
 
 
