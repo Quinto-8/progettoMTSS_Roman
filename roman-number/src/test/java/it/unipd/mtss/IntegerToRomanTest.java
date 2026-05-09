@@ -157,5 +157,35 @@ public class IntegerToRomanTest {
 
         assertEquals(expected, result);
     }
+
+    @Test
+    public void shouldConvert90ToXC() {
+        int number = 90;
+        String expected = "XC";
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldConvert99ToXCIX() {
+        int number = 99;
+        String expected = "XCIX";
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldConvert100ToC() {
+        int number = 100;
+        String expected = "C";
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals(expected, result);
+    }
 }
 

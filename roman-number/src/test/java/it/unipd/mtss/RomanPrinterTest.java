@@ -201,5 +201,53 @@ public class RomanPrinterTest {
     String result = RomanPrinter.print(number);
 
     assertEquals(expected, result);
-}
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber90() {
+        int number = 90;
+        String expected = 
+            "__   __  _____ \n" +
+            "\\ \\ / / / ____|\n" +
+            " \\ V / | |     \n" +
+            "  > <  | |     \n" +
+            " / ^ \\ | |____ \n" +
+            "/_/ \\_\\ \\_____|\n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber100() {
+        int number = 100;
+        String expected = 
+            "  _____ \n" +
+            " / ____|\n" +
+            "| |     \n" +
+            "| |     \n" +
+            "| |____ \n" +
+            " \\_____|\n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber99() {
+        int number = 99;
+        String expected = 
+            "__   __  _____  _____ __   __\n" +
+            "\\ \\ / / / ____||_   _|\\ \\ / /\n" +
+            " \\ V / | |       | |   \\ V / \n" +
+            "  > <  | |       | |    > <  \n" +
+            " / ^ \\ | |____  _| |_  / ^ \\ \n" +
+            "/_/ \\_\\ \\_____||_____|/_/ \\_\\\n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
 }

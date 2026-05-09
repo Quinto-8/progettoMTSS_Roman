@@ -21,7 +21,7 @@ public class RomanPrinter {
         }
         return result.toString();
     }
- 
+
     private static String getLine(char letter, int row) {
         if (letter == 'I') {
                 String[] iArt={
@@ -56,7 +56,6 @@ public class RomanPrinter {
                 };
                 return xArt[row];
         }
-
         if (letter == 'L') {
                 String[] lArt={
                     " _      ",
@@ -68,7 +67,17 @@ public class RomanPrinter {
                 };
                 return lArt[row];
         }
+        if (letter == 'C') {
+                String[] cArt={
+                    "  _____ ",
+                    " / ____|",
+                    "| |     ",
+                    "| |     ",
+                    "| |____ ",
+                    " \\_____|"
+                };
+                return cArt[row];
+        }
         return "";
-
     }
 }
