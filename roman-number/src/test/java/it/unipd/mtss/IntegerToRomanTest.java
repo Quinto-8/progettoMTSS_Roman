@@ -187,5 +187,36 @@ public class IntegerToRomanTest {
 
         assertEquals(expected, result);
     }
+
+    @Test
+    public void shouldConvert400ToCD() {
+        int number = 400;
+        String expected = "CD";
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldConvert444ToCDXLIV() {
+        int number = 444;
+        String expected = "CDXLIV";
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldConvert500ToD() {
+        int number = 500;
+        String expected = "D";
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals(expected, result);
+    }
+
 }
 

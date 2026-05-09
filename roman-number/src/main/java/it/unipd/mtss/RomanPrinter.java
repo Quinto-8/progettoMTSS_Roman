@@ -78,6 +78,17 @@ public class RomanPrinter {
                 };
                 return cArt[row];
         }
+        if (letter == 'D') {
+                String[] dArt={
+                    " _____  " ,
+                    "|  __ \\ " ,
+                    "| |  | |" ,
+                    "| |  | |" ,
+                    "| |__| |" ,
+                    "|_____/ ",
+                };
+                return dArt[row];
+        }
         return "";
     }
 }
