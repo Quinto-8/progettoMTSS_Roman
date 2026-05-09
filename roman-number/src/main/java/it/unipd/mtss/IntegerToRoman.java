@@ -8,12 +8,12 @@ package it.unipd.mtss;
 public class IntegerToRoman {
 
     public static String convert(int number) {
-        if (number < 1 || number > 500) {
-            throw new IllegalArgumentException("Numero fuori range (1-50)");
+        if (number < 1 || number > 1000) {
+            throw new IllegalArgumentException("Numero fuori range (1-1000)");
         }
         
-        String[] symbols = {"D", "CD", "C","XC", "L", "XL", "X", "IX", "V", "IV", "I"};
-        int[] values = {500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        String[] symbols = {"M", "CM", "D", "CD", "C","XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+        int[] values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
         
         StringBuilder roman = new StringBuilder();
 
