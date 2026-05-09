@@ -1,0 +1,356 @@
+////////////////////////////////////////////////////////////////////
+// ANDREA MAGGIO 2145610
+// ALEX BUOSO 2148614
+////////////////////////////////////////////////////////////////////
+
+package it.unipd.mtss;
+
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class RomanPrinterTest {
+
+    @Test
+    public void shouldPrintAsciiArtForNumber1() {
+        
+        int number = 1;
+        String expected = 
+              " _____ \n" +
+              "|_   _|\n" +
+              "  | |  \n" +
+              "  | |  \n" +
+              " _| |_ \n" +
+              "|_____|\n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber3() {
+        
+        int number = 3;
+        String expected = 
+              " _____  _____  _____ \n" +
+              "|_   _||_   _||_   _|\n" +
+              "  | |    | |    | |  \n" +
+              "  | |    | |    | |  \n" +
+              " _| |_  _| |_  _| |_ \n" +
+              "|_____||_____||_____|\n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber6() {
+        int number = 6;
+        String expected = 
+            "__      __ _____ \n" + 
+            "\\ \\    / /|_   _|\n" +
+            " \\ \\  / /   | |  \n" +
+            "  \\ \\/ /    | |  \n" +
+            "   \\  /    _| |_ \n" +
+            "    \\/    |_____|\n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }   
+
+    @Test
+    public void shouldReturnAsciiArtForNumber8() {
+        int number = 8;
+        String expected = 
+            "__      __ _____  _____  _____ \n" +
+            "\\ \\    / /|_   _||_   _||_   _|\n" +
+            " \\ \\  / /   | |    | |    | |  \n" +
+            "  \\ \\/ /    | |    | |    | |  \n" +
+            "   \\  /    _| |_  _| |_  _| |_ \n" +
+            "    \\/    |_____||_____||_____|\n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldReturnAsciiArtForNumber9() {
+        int number = 9;
+        String expected = 
+            " _____ __   __\n" +
+            "|_   _|\\ \\ / /\n" +
+            "  | |   \\ V / \n" +
+            "  | |    > <  \n" +
+            " _| |_  / ^ \\ \n" +
+            "|_____|/_/ \\_\\\n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldReturnAsciiArtForNumber10() {
+        int number = 10;
+        String expected = 
+            "__   __\n" +
+            "\\ \\ / /\n" +
+            " \\ V / \n" +
+            "  > <  \n" +
+            " / ^ \\ \n" +
+            "/_/ \\_\\\n";
+   
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber14() {
+        int number = 14;
+        String expected = 
+            "__   __ _____ __      __\n" +
+            "\\ \\ / /|_   _|\\ \\    / /\n" +
+            " \\ V /   | |   \\ \\  / / \n" +
+            "  > <    | |    \\ \\/ /  \n" +
+            " / ^ \\  _| |_    \\  /   \n" +
+            "/_/ \\_\\|_____|    \\/    \n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber19() {
+        int number = 19;
+        String expected = 
+            "__   __ _____ __   __\n" +
+            "\\ \\ / /|_   _|\\ \\ / /\n" +
+            " \\ V /   | |   \\ V / \n" +
+            "  > <    | |    > <  \n" +
+            " / ^ \\  _| |_  / ^ \\ \n" +
+            "/_/ \\_\\|_____|/_/ \\_\\\n";
+
+        String result = RomanPrinter.print(number);
+        
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber20() {
+        int number = 20;
+        String expected = 
+            "__   ____   __\n" +
+            "\\ \\ / /\\ \\ / /\n" +
+            " \\ V /  \\ V / \n" +
+            "  > <    > <  \n" +
+            " / ^ \\  / ^ \\ \n" +
+            "/_/ \\_\\/_/ \\_\\\n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber40() {
+        int number = 40;
+        String expected = 
+            "__   __ _      \n" +
+            "\\ \\ / /| |     \n" +
+            " \\ V / | |     \n" +
+            "  > <  | |     \n" +
+            " / ^ \\ | |____ \n" +
+            "/_/ \\_\\|______|\n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber50() {
+        int number = 50;
+        String expected = 
+            " _      \n" +
+            "| |     \n" +
+            "| |     \n" +
+            "| |     \n" +
+            "| |____ \n" +
+            "|______|\n";
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber44() {
+    int number = 44; 
+    String expected = 
+        "__   __ _       _____ __      __\n" +
+        "\\ \\ / /| |     |_   _|\\ \\    / /\n" +
+        " \\ V / | |       | |   \\ \\  / / \n" +
+        "  > <  | |       | |    \\ \\/ /  \n" +
+        " / ^ \\ | |____  _| |_    \\  /   \n" +
+        "/_/ \\_\\|______||_____|    \\/    \n";
+
+    String result = RomanPrinter.print(number);
+
+    assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber90() {
+        int number = 90;
+        String expected = 
+            "__   __  _____ \n" +
+            "\\ \\ / / / ____|\n" +
+            " \\ V / | |     \n" +
+            "  > <  | |     \n" +
+            " / ^ \\ | |____ \n" +
+            "/_/ \\_\\ \\_____|\n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber100() {
+        int number = 100;
+        String expected = 
+            "  _____ \n" +
+            " / ____|\n" +
+            "| |     \n" +
+            "| |     \n" +
+            "| |____ \n" +
+            " \\_____|\n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber99() {
+        int number = 99;
+        String expected = 
+            "__   __  _____  _____ __   __\n" +
+            "\\ \\ / / / ____||_   _|\\ \\ / /\n" +
+            " \\ V / | |       | |   \\ V / \n" +
+            "  > <  | |       | |    > <  \n" +
+            " / ^ \\ | |____  _| |_  / ^ \\ \n" +
+            "/_/ \\_\\ \\_____||_____|/_/ \\_\\\n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber400() {
+        int number = 400; 
+        String expected = 
+            "  _____  _____  \n" +
+            " / ____||  __ \\ \n" +
+            "| |     | |  | |\n" +
+            "| |     | |  | |\n" +
+            "| |____ | |__| |\n" +
+            " \\_____||_____/ \n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber444() {
+        int number = 444;
+        String expected = 
+            "  _____  _____  __   __ _       _____ __      __\n" +
+            " / ____||  __ \\ \\ \\ / /| |     |_   _|\\ \\    / /\n" +
+            "| |     | |  | | \\ V / | |       | |   \\ \\  / / \n" +
+            "| |     | |  | |  > <  | |       | |    \\ \\/ /  \n" +
+            "| |____ | |__| | / ^ \\ | |____  _| |_    \\  /   \n" +
+            " \\_____||_____/ /_/ \\_\\|______||_____|    \\/    \n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber500() {
+        int number = 500; 
+        String expected = 
+            " _____  \n" +
+            "|  __ \\ \n" +
+            "| |  | |\n" +
+            "| |  | |\n" +
+            "| |__| |\n" +
+            "|_____/ \n";
+        
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber900() {
+        int number = 900;
+        String expected = 
+            "  _____  __  __ \n" +
+            " / ____||  \\/  |\n" +
+            "| |     | \\  / |\n" +
+            "| |     | |\\/| |\n" +
+            "| |____ | |  | |\n" +
+            " \\_____||_|  |_|\n";
+        
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber1000() {
+        int number = 1000;
+        String expected = 
+            " __  __ \n" +
+            "|  \\/  |\n" +
+            "| \\  / |\n" +
+            "| |\\/| |\n" +
+            "| |  | |\n" +
+            "|_|  |_|\n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber888() {
+        int number = 888;
+        String expected = 
+            " _____    _____   _____   _____  _      __   ____   ____   ____      __ _____  _____  _____ \n" +
+            "|  __ \\  / ____| / ____| / ____|| |     \\ \\ / /\\ \\ / /\\ \\ / /\\ \\    / /|_   _||_   _||_   _|\n" +
+            "| |  | || |     | |     | |     | |      \\ V /  \\ V /  \\ V /  \\ \\  / /   | |    | |    | |  \n" +
+            "| |  | || |     | |     | |     | |       > <    > <    > <    \\ \\/ /    | |    | |    | |  \n" +
+            "| |__| || |____ | |____ | |____ | |____  / ^ \\  / ^ \\  / ^ \\    \\  /    _| |_  _| |_  _| |_ \n" +
+            "|_____/  \\_____| \\_____| \\_____||______|/_/ \\_\\/_/ \\_\\/_/ \\_\\    \\/    |_____||_____||_____|\n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowExceptionForNumberOver1000() {
+        int number = 1001;
+        
+        String result = RomanPrinter.print(number);
+    }
+}
