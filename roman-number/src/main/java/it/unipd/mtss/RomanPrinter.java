@@ -89,6 +89,17 @@ public class RomanPrinter {
                 };
                 return dArt[row];
         }
+        if (letter == 'M') {
+                String[] mArt = {
+                    " __  __ ",
+                    "|  \\/  |",
+                    "| \\  / |",
+                    "| |\\/| |",
+                    "| |  | |",
+                    "|_|  |_|"
+                };
+                return mArt[row];
+        }
         return "";
     }
 }

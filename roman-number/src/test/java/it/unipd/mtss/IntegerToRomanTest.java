@@ -11,8 +11,26 @@ import org.junit.Test;
 public class IntegerToRomanTest {
 
     @Test(expected = IllegalArgumentException.class)
-    public void testInputNegativo() {
-        IntegerToRoman.convert(-1);
+    public void shouldThrowExceptionForNegativeNumber() {
+
+        int number = -1;
+
+        String result = IntegerToRoman.convert(number);
+    }
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowExceptionForZero() {
+
+        int number = 0;
+
+        String result = IntegerToRoman.convert(number);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowExceptionForVeryLargeNumber() {
+
+        int number = Integer.MAX_VALUE;
+
+        String result = IntegerToRoman.convert(number);
     }
 
     @Test
@@ -212,6 +230,36 @@ public class IntegerToRomanTest {
     public void shouldConvert500ToD() {
         int number = 500;
         String expected = "D";
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldConvert888ToDCCCLXXXVIII() {
+        int number = 888;
+        String expected = "DCCCLXXXVIII";
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldConvert900ToCM() {
+        int number = 900;
+        String expected = "CM";
+
+        String result = IntegerToRoman.convert(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldConvert1000ToM() {
+        int number = 1000;
+        String expected = "M";
 
         String result = IntegerToRoman.convert(number);
 
