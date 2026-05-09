@@ -298,4 +298,59 @@ public class RomanPrinterTest {
 
         assertEquals(expected, result);
     }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber900() {
+        int number = 900;
+        String expected = 
+            "  _____  __  __ \n" +
+            " / ____||  \\/  |\n" +
+            "| |     | \\  / |\n" +
+            "| |     | |\\/| |\n" +
+            "| |____ | |  | |\n" +
+            " \\_____||_|  |_|\n";
+        
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber1000() {
+        int number = 1000;
+        String expected = 
+            " __  __ \n" +
+            "|  \\/  |\n" +
+            "| \\  / |\n" +
+            "| |\\/| |\n" +
+            "| |  | |\n" +
+            "|_|  |_|\n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber888() {
+        int number = 888;
+        String expected = 
+            " _____    _____   _____   _____  _      __   ____   ____   ____      __ _____  _____  _____ \n" +
+            "|  __ \\  / ____| / ____| / ____|| |     \\ \\ / /\\ \\ / /\\ \\ / /\\ \\    / /|_   _||_   _||_   _|\n" +
+            "| |  | || |     | |     | |     | |      \\ V /  \\ V /  \\ V /  \\ \\  / /   | |    | |    | |  \n" +
+            "| |  | || |     | |     | |     | |       > <    > <    > <    \\ \\/ /    | |    | |    | |  \n" +
+            "| |__| || |____ | |____ | |____ | |____  / ^ \\  / ^ \\  / ^ \\    \\  /    _| |_  _| |_  _| |_ \n" +
+            "|_____/  \\_____| \\_____| \\_____||______|/_/ \\_\\/_/ \\_\\/_/ \\_\\    \\/    |_____||_____||_____|\n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowExceptionForNumberOver1000() {
+        int number = 1001;
+        
+        String result = RomanPrinter.print(number);
+    }
 }
