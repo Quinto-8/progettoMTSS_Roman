@@ -250,4 +250,52 @@ public class RomanPrinterTest {
 
         assertEquals(expected, result);
     }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber400() {
+        int number = 400; 
+        String expected = 
+            "  _____  _____  \n" +
+            " / ____||  __ \\ \n" +
+            "| |     | |  | |\n" +
+            "| |     | |  | |\n" +
+            "| |____ | |__| |\n" +
+            " \\_____||_____/ \n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber444() {
+        int number = 444;
+        String expected = 
+            "  _____  _____  __   __ _       _____ __      __\n" +
+            " / ____||  __ \\ \\ \\ / /| |     |_   _|\\ \\    / /\n" +
+            "| |     | |  | | \\ V / | |       | |   \\ \\  / / \n" +
+            "| |     | |  | |  > <  | |       | |    \\ \\/ /  \n" +
+            "| |____ | |__| | / ^ \\ | |____  _| |_    \\  /   \n" +
+            " \\_____||_____/ /_/ \\_\\|______||_____|    \\/    \n";
+
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void shouldPrintAsciiArtForNumber500() {
+        int number = 500; 
+        String expected = 
+            " _____  \n" +
+            "|  __ \\ \n" +
+            "| |  | |\n" +
+            "| |  | |\n" +
+            "| |__| |\n" +
+            "|_____/ \n";
+        
+        String result = RomanPrinter.print(number);
+
+        assertEquals(expected, result);
+    }
 }
